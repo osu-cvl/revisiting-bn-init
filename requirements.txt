@@ -1,0 +1,13 @@
+# Utilizes CUDA 10.2 and CuDNN7 on Ubuntu 16.04
+
+pillow==8.1.2
+numpy==1.20.2
+scikit-learn==0.24.1
+scipy==1.6.2
+
+
+--find-links https://download.pytorch.org/whl/torch_stable.html
+torch==1.8
+torchvision==0.9.0
+
+# For the paper, all experiments were run on a NVIDIA Tesla V100 GPU.
