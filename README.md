@@ -1,6 +1,6 @@
-# Revisiting Batch Normalization
+# Revisiting Batch Norm Initialization
 
-This repo contains the official code for the paper ["Revisiting Batch Normalization"](https://arxiv.org/abs/2110.13989) by [Jim Davis](http://web.cse.ohio-state.edu/~davis.1719/) and [Logan Frank](https://loganfrank.github.io/).
+This repo contains the official code for the paper ["Revisiting Batch Norm Initialization"](https://arxiv.org/abs/2110.13989) by [Jim Davis](http://web.cse.ohio-state.edu/~davis.1719/) and [Logan Frank](https://loganfrank.github.io/), which was accepted to the European Conference on Computer Vision (ECCV) 2022.
 
 In this work, we observed that the learned scale (&gamma;) and shift (β) affine transformation parameters of batch normalization tend to remain close to their initialization and further noticed that the normalization operation of batch normalization can yield overly large values, which are preserved through the remainder of the forward pass due to the previous observation. We first examined the batch normalization gradient equations and derived the influence of the batch normalization scale parameter with respect to training then empirically showed across multiple datasets and network architectures that with initializations of the BN scale parameter < 1 and reducing the learning rate on the batch normalization scale parameter, statistically significant gains in performance can be seen (according to a one-sided paired t-test).
 
@@ -135,13 +135,13 @@ if p_value <= 0.05:
 
 ## Citation
 
-At the moment, please cite our paper "Revisiting Batch Normalization" with
+Please cite our paper "Revisiting Batch Norm Initialization" with
 
 ```
-@article{davis2021revisiting,
-  title={Revisiting Batch Normalization},
+@article{Davis2022revisiting,
+  title={Revisiting Batch Norm Initialization},
   author={Davis, Jim and Frank, Logan},
-  journal={arXiv preprint arXiv:2110.13989},
-  year={2021}
+  journal={European Conference on Computer Vision},
+  year={2022}
 }
 ```
